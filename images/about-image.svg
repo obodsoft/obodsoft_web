@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" fill="none">
+  <!-- Background Elements -->
+  <circle cx="400" cy="300" r="250" fill="#F0F4FF" />
+  
+  <!-- Team Members -->
+  <!-- Person 1 -->
+  <circle cx="300" cy="280" r="70" fill="#4361EE" />
+  <circle cx="300" cy="240" r="30" fill="#FFFFFF" />
+  <path d="M260 320 Q300 360 340 320" stroke="#FFFFFF" stroke-width="3" fill="none" />
+  
+  <!-- Person 2 -->
+  <circle cx="420" cy="250" r="60" fill="#3A0CA3" />
+  <circle cx="420" cy="220" r="25" fill="#FFFFFF" />
+  <path d="M390 280 Q420 310 450 280" stroke="#FFFFFF" stroke-width="3" fill="none" />
+  
+  <!-- Person 3 -->
+  <circle cx="520" cy="290" r="65" fill="#4CC9F0" />
+  <circle cx="520" cy="255" r="28" fill="#FFFFFF" />
+  <path d="M485 325 Q520 355 555 325" stroke="#FFFFFF" stroke-width="3" fill="none" />
+  
+  <!-- Connecting Lines -->
+  <line x1="350" y1="300" x2="380" y2="270" stroke="#3A0CA3" stroke-width="3" stroke-dasharray="5,5" />
+  <line x1="460" y1="270" x2="480" y2="290" stroke="#3A0CA3" stroke-width="3" stroke-dasharray="5,5" />
+  
+  <!-- Floating Elements -->
+  <circle cx="250" cy="200" r="15" fill="#4CC9F0" opacity="0.7" />
+  <circle cx="580" cy="230" r="20" fill="#4361EE" opacity="0.7" />
+  <circle cx="480" cy="380" r="12" fill="#3A0CA3" opacity="0.7" />
+  <circle cx="350" cy="380" r="10" fill="#4CC9F0" opacity="0.7" />
+  
+  <!-- Abstract Shapes -->
+  <rect x="250" y="380" width="40" height="40" rx="8" fill="#4361EE" opacity="0.5" />
+  <rect x="530" y="370" width="30" height="30" rx="6" fill="#3A0CA3" opacity="0.5" />
+  <rect x="400" y="400" width="50" height="20" rx="4" fill="#4CC9F0" opacity="0.5" />
+</svg>
