@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,11 +32,31 @@ export default function Header() {
             <h1>Obod<span>Soft</span></h1>
           </div>
           <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
-            <li><a href="#home" onClick={() => setIsMenuOpen(false)}>Home</a></li>
-            <li><a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a></li>
-            <li><a href="#about" onClick={() => setIsMenuOpen(false)}>About</a></li>
-            <li><a href="#portfolio" onClick={() => setIsMenuOpen(false)}>Portfolio</a></li>
-            <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
+            <li>
+              <Link href="/" onClick={() => setIsMenuOpen(false)}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/services" onClick={() => setIsMenuOpen(false)}>
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" onClick={() => setIsMenuOpen(false)}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link href="/portfolio" onClick={() => setIsMenuOpen(false)}>
+                Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+                Contact
+              </Link>
+            </li>
           </ul>
           <div className={`hamburger ${isMenuOpen ? "active" : ""}`} onClick={toggleMenu}>
             <span></span>
