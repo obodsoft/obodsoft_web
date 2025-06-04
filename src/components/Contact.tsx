@@ -1,12 +1,14 @@
 "use client";
 
-import { useEffect, FormEvent } from "react";
-import { animateOnScroll } from "@/utils/animations";
+import { FormEvent } from "react";
+import { useInView } from "@/utils/animations";
 
 export default function Contact() {
-  useEffect(() => {
-    animateOnScroll();
-  }, []);
+  // Create refs for each animated section
+  const headerRef = useInView();
+  const subtitleRef = useInView();
+  const infoRef = useInView();
+  const formRef = useInView();
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -36,6 +38,7 @@ export default function Contact() {
     
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
     if (!emailRegex.test(email)) {
       alert('Please enter a valid email address');
       return;
@@ -59,11 +62,15 @@ export default function Contact() {
     <section id="contact" className="contact">
       <div className="container">
         <div className="section-header">
-          <h2 className="animate-on-scroll">Contact Us</h2>
-          <p className="animate-on-scroll">Get in touch with our team</p>
+          <div ref={headerRef.ref} className="animate-on-scroll">
+            <h2>Contact Us</h2>
+          </div>
+          <div ref={subtitleRef.ref} className="animate-on-scroll">
+            <p>Get in touch with our team</p>
+          </div>
         </div>
         <div className="contact-content">
-          <div className="contact-info animate-on-scroll">
+          <div ref={infoRef.ref} className="contact-info animate-on-scroll">
             <div className="contact-item">
               <i className="fas fa-envelope"></i>
               <h3>Email</h3>
@@ -80,7 +87,7 @@ export default function Contact() {
               <a href="#" className="social-icon"><i className="fab fa-github"></i></a>
             </div>
           </div>
-          <div className="contact-form animate-on-scroll">
+          <div ref={formRef.ref} className="contact-form animate-on-scroll">
             <form id="contactForm" onSubmit={handleSubmit}>
               <div className="form-group">
                 <input type="text" id="name" name="name" placeholder="Your Name" required />
