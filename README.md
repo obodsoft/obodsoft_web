@@ -62,10 +62,8 @@ The Next.js app is configured for static export, making it suitable for GitHub P
 
 ```bash
 # Create a static export
-npm run build
 npm run export
 # or
-yarn build
 yarn export
 ```
 
