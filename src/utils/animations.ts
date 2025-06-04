@@ -34,3 +34,19 @@ export const useInView = (options = { threshold: 0.1, rootMargin: '0px 0px -100p
 
   return { ref, isInView };
 };
+
+/**
+ * Utility function to trigger scroll-based animations.
+ */
+export const animateOnScroll = (): void => {
+  const elements = document.querySelectorAll('.animate-on-scroll');
+
+  elements.forEach(element => {
+    const elementPosition = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (elementPosition < windowHeight - 100) {
+      element.classList.add('animate');
+    }
+  });
+};
