@@ -46,7 +46,7 @@ export default function Contact() {
     
     // For GitHub Pages, we'll use a mailto link as a fallback
     // In a real implementation, you would use a backend service or email API
-    const mailtoLink = `mailto:alex@obodsoft?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
+    const mailtoLink = `mailto:alex@obodsoft.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
     
     // Open email client
     window.location.href = mailtoLink;
@@ -74,7 +74,7 @@ export default function Contact() {
             <div className="contact-item">
               <i className="fas fa-envelope"></i>
               <h3>Email</h3>
-              <p><a href="mailto:alex@obodsoft">alex@obodsoft</a></p>
+              <p><a href="mailto:alex@obodsoft.com">alex@obodsoft.com</a></p>
             </div>
             <div className="contact-item">
               <i className="fas fa-map-marker-alt"></i>
