@@ -36,11 +36,10 @@ export const useInView = (options = { threshold: 0.1, rootMargin: '0px 0px -100p
 };
 
 /**
- * Legacy function for backward compatibility
- * @deprecated Use the useInView hook instead
+ * Helper function to trigger animations on scroll.
+ * Provided for components that don't yet leverage the `useInView` hook.
  */
 export const animateOnScroll = (): void => {
-  console.warn('animateOnScroll is deprecated. Use the useInView hook instead.');
 
   const elements = document.querySelectorAll('.animate-on-scroll');
   

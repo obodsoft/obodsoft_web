@@ -2,8 +2,9 @@ import "@/styles/globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Obod Soft | Modern Software Solutions",
-  description: "Modern Software Agency specializing in innovative solutions",
+  title: "Obod Soft | Web & Mobile App Experts",
+  description:
+    "We craft modern web and mobile applications that help your business grow.",
 };
 
 export default function RootLayout({
