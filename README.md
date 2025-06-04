@@ -86,5 +86,5 @@ The static files will be generated in the `out` directory, which can be deployed
 
 ## Contact
 
-For any inquiries, please contact: alex@obodsoft
+For any inquiries, please contact: alex@obodsoft.com
 
