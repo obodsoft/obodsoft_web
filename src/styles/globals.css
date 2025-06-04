@@ -499,6 +499,22 @@ nav {
     text-align: center;
 }
 
+/* Call To Action Section */
+.cta {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-buttons {
+    margin-top: 25px;
+}
+
 /* Contact Section */
 .contact {
     background-color: #f8f9fa;

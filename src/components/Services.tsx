@@ -13,7 +13,7 @@ export default function Services() {
       <div className="container">
         <div className="section-header">
           <h2 className="animate-on-scroll">Our Services</h2>
-          <p className="animate-on-scroll">We offer a wide range of software development services</p>
+          <p className="animate-on-scroll">Delivering digital products your users will love</p>
         </div>
         <div className="services-grid">
           <div className="service-card animate-on-scroll">
@@ -21,28 +21,28 @@ export default function Services() {
               <i className="fas fa-laptop-code"></i>
             </div>
             <h3>Web Development</h3>
-            <p>Custom websites and web applications built with the latest technologies.</p>
+            <p>Robust websites and web apps crafted with modern frameworks.</p>
           </div>
           <div className="service-card animate-on-scroll">
             <div className="service-icon">
               <i className="fas fa-mobile-alt"></i>
             </div>
             <h3>Mobile Apps</h3>
-            <p>Native and cross-platform mobile applications for iOS and Android.</p>
+            <p>Beautifully designed iOS and Android apps that engage on the go.</p>
           </div>
           <div className="service-card animate-on-scroll">
             <div className="service-icon">
               <i className="fas fa-server"></i>
             </div>
             <h3>Cloud Solutions</h3>
-            <p>Scalable cloud infrastructure and deployment services.</p>
+            <p>Architecture and hosting built for scale and reliability.</p>
           </div>
           <div className="service-card animate-on-scroll">
             <div className="service-icon">
               <i className="fas fa-cogs"></i>
             </div>
             <h3>DevOps</h3>
-            <p>Streamline your development and operations with our DevOps expertise.</p>
+            <p>CI/CD pipelines and automation to keep your releases running smoothly.</p>
           </div>
         </div>
       </div>

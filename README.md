@@ -1,6 +1,6 @@
-# Obod Soft - Modern Software Agency Landing Page
+# Obod Soft - Web & Mobile App Experts
 
-A modern, responsive landing page for Obod Soft software agency built with Next.js, featuring animations and a contact form.
+A modern, responsive marketing site for Obod Soft built with Next.js. The project showcases our services, past work, and includes a contact form for new engagements.
 
 ## Features
 
