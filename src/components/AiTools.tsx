@@ -19,9 +19,13 @@ export default function AiTools() {
     "github",
   ];
 
-  const logoImages = logos.map(name => (
+  const logoImages = logos.map((name) => (
     <img key={name} src={`/images/${name}.svg`} alt={`${name} logo`} />
   ));
+
+  const LogoRow = ({ direction }: { direction: "left" | "right" }) => (
+    <div className={`logos-row ${direction}`}>{logoImages}{logoImages}</div>
+  );
 
   return (
     <section className="ai-tools">
@@ -31,13 +35,16 @@ export default function AiTools() {
             <h2>AI Tools Ecosystem</h2>
           </div>
           <div ref={textRef.ref} className="animate-on-scroll">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo ligula eget risus cursus, a hendrerit velit viverra.</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+              commodo ligula eget risus cursus, a hendrerit velit viverra.
+            </p>
           </div>
         </div>
       </div>
       <div className="ai-tools-logos" aria-hidden="true">
-        <div className="logos-slide">{logoImages}</div>
-        <div className="logos-slide">{logoImages}</div>
+        <LogoRow direction="left" />
+        <LogoRow direction="right" />
       </div>
     </section>
   );
