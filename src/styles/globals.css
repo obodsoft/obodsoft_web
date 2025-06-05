@@ -780,3 +780,39 @@ footer {
         gap: 20px;
     }
 }
+
+/* Water Drop Hero Widget */
+.water-drop-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 60px 0;
+    background-color: #e9f4ff;
+}
+
+.water-drop-hero .drops {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.water-drop-hero .drop {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    opacity: 0.7;
+}
+
+.water-drop-hero .drop-1 { left: 20%; top: 40%; }
+.water-drop-hero .drop-2 { left: 50%; top: 20%; }
+.water-drop-hero .drop-3 { left: 80%; top: 60%; }
+
+.water-drop-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
