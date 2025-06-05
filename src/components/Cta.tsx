@@ -15,7 +15,7 @@ export default function Cta() {
             Ready to launch your next project?
           </h2>
           <p ref={textRef.ref} className="animate-on-scroll">
-            Let's collaborate to build software that moves your business forward.
+            Let&apos;s collaborate to build software that moves your business forward.
           </p>
           <div ref={buttonRef.ref} className="cta-buttons animate-on-scroll">
             <a href="#contact" className="btn btn-primary">
