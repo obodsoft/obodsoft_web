@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import anime from "animejs";
+import anime from "animejs/lib/anime.es.js";
 
 interface WaterDropHeroProps {
   children?: React.ReactNode;
@@ -20,12 +20,14 @@ export default function WaterDropHero({
 
     const animation = anime({
       targets: drops,
-      translateY: [0, -20],
+      translateY: [0, -30],
+      scale: [1, 1.25],
+      opacity: [0.7, 1],
       direction: "alternate",
       easing: "easeInOutSine",
       loop: true,
       delay: anime.stagger(300),
-      duration: 1200,
+      duration: 2000,
     });
 
     return () => {
