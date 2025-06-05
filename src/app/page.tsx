@@ -9,6 +9,7 @@ import Portfolio from "@/components/Portfolio";
 import Cta from "@/components/Cta";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import AiTools from "@/components/AiTools";
 import { animateOnScroll } from "@/utils/animations";
 
 export default function Home() {
@@ -30,6 +31,7 @@ export default function Home() {
       <Services />
       <About />
       <Portfolio />
+      <AiTools />
       <Cta />
       <Contact />
       <Footer />

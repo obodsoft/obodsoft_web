@@ -36,6 +36,33 @@ export const useInView = (options = { threshold: 0.1, rootMargin: '0px 0px -100p
 };
 
 /**
+ * Hook to create a simple parallax scrolling effect
+ * @param speed Multiplier to control scroll speed
+ */
+export const useParallax = (speed: number = 0.3): { ref: MutableRefObject<HTMLDivElement | null> } => {
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+    const startY = element.offsetTop;
+
+    const handleScroll = () => {
+      const offset = (window.pageYOffset - startY) * speed;
+      element.style.transform = `translateY(${offset}px)`;
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [speed]);
+
+  return { ref };
+};
+
+/**
  * Legacy function for backward compatibility
  * @deprecated Use the useInView hook instead
  */
