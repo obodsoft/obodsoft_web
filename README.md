@@ -7,6 +7,7 @@ A modern, responsive marketing site for Obod Soft built with Next.js. The projec
 - Modern and responsive design with Next.js and React
 - Smooth animations and transitions
 - Mobile-friendly navigation
+- Automatic light and dark theme based on user preferences
 - Contact form with email functionality
 - Dedicated pages for services, about, and contact
 - Engaging marketing copy on each page to convert visitors
