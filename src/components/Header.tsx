@@ -55,6 +55,11 @@ export default function Header() {
               </Link>
             </li>
             <li>
+              <Link href="/logo-wall" onClick={() => setIsMenuOpen(false)}>
+                Logo Wall
+              </Link>
+            </li>
+            <li>
               <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
                 Contact
               </Link>
