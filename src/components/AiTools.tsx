@@ -1,10 +1,11 @@
 "use client";
 
-import { useInView } from "@/utils/animations";
+import { useInView, useParallax } from "@/utils/animations";
 
 export default function AiTools() {
   const headerRef = useInView();
   const textRef = useInView();
+  const logosRef = useParallax(0.2);
 
   const logos = [
     "replit",
@@ -42,7 +43,7 @@ export default function AiTools() {
           </div>
         </div>
       </div>
-      <div className="ai-tools-logos" aria-hidden="true">
+      <div ref={logosRef.ref} className="ai-tools-logos" aria-hidden="true">
         <LogoRow direction="left" />
         <LogoRow direction="right" />
       </div>

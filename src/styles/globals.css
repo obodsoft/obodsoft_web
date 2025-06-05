@@ -700,6 +700,8 @@ footer {
     height: 100%;
     pointer-events: none;
     overflow: hidden;
+    will-change: transform;
+    transform: translateY(0);
 }
 
 .logos-row {

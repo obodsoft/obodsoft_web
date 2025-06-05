@@ -1,5 +1,5 @@
 import { render, act } from '@testing-library/react';
-import { useInView } from './animations';
+import { useInView, useParallax } from './animations';
 import React from 'react';
 
 class MockIntersectionObserver {
@@ -42,5 +42,30 @@ describe('useInView', () => {
 
     expect(target).toHaveClass('animate');
     observerSpy.mockRestore();
+  });
+});
+
+describe('useParallax', () => {
+  it('updates transform style based on scroll', () => {
+    Object.defineProperty(window, 'pageYOffset', {
+      writable: true,
+      configurable: true,
+      value: 0,
+    });
+
+    function TestParallax() {
+      const { ref } = useParallax(0.5);
+      return React.createElement('div', { 'data-testid': 'parallax', ref });
+    }
+
+    const { getByTestId } = render(React.createElement(TestParallax));
+    const target = getByTestId('parallax');
+
+    act(() => {
+      window.pageYOffset = 200;
+      window.dispatchEvent(new Event('scroll'));
+    });
+
+    expect(target.style.transform).toBe('translateY(100px)');
   });
 });
