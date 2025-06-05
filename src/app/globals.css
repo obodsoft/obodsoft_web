@@ -576,6 +576,35 @@ footer {
     color: white;
 }
 
+/* Logo Wall */
+.logo-wall {
+    background-color: #f8f9fa;
+}
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.logo-item img {
+    width: auto;
+    height: auto;
+}
+
+.logo-small img {
+    max-height: 50px;
+}
+
+.logo-medium img {
+    max-height: 80px;
+}
+
+.logo-large img {
+    max-height: 110px;
+}
+
 .copyright {
     text-align: center;
     padding-top: 20px;
