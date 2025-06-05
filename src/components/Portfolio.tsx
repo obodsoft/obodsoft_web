@@ -27,7 +27,7 @@ export default function Portfolio() {
             <div className="portfolio-overlay">
               <h3>Alma Media</h3>
               <p>Digital Publishing Platform</p>
-              <span className="portfolio-description">Led the development of responsive UI components for Finland's largest media company, implementing React-based solutions that increased user engagement by 34% and reduced page load times by 40%. Created innovative data visualization tools for their analytics dashboard.</span>
+              <span className="portfolio-description">Led the development of responsive UI components for Finland&apos;s largest media company, implementing React-based solutions that increased user engagement by 34% and reduced page load times by 40%. Created innovative data visualization tools for their analytics dashboard.</span>
             </div>
           </div>
           <div ref={project2Ref.ref} className="portfolio-item animate-on-scroll">
@@ -43,7 +43,7 @@ export default function Portfolio() {
             <div className="portfolio-overlay">
               <h3>Groupon</h3>
               <p>E-commerce Marketplace</p>
-              <span className="portfolio-description">Spearheaded a critical performance optimization initiative for Groupon's deal discovery platform that served 40+ million monthly users. Implemented code splitting, lazy loading, and virtual scrolling techniques that reduced page load time by 65% and increased conversion rates by 22%. Enhanced the mobile experience with responsive design patterns.</span>
+              <span className="portfolio-description">Spearheaded a critical performance optimization initiative for Groupon&apos;s deal discovery platform that served 40+ million monthly users. Implemented code splitting, lazy loading, and virtual scrolling techniques that reduced page load time by 65% and increased conversion rates by 22%. Enhanced the mobile experience with responsive design patterns.</span>
             </div>
           </div>
         </div>
