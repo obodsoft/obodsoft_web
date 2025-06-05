@@ -9,6 +9,14 @@
     --transition: all 0.3s ease;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #f8f9fa;
+        --light-color: #212529;
+        --dark-color: #f8f9fa;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;

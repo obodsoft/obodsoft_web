@@ -9,6 +9,47 @@
     --transition: all 0.3s ease;
 }
 
+/* Dark mode variables based on user preference */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #f8f9fa;
+        --light-color: #212529;
+        --dark-color: #f8f9fa;
+    }
+
+    body {
+        background-color: var(--light-color);
+    }
+
+    header {
+        background-color: rgba(33, 37, 41, 0.95);
+    }
+
+    header.scrolled {
+        background-color: var(--light-color);
+    }
+
+    .hero,
+    .page-hero {
+        background: linear-gradient(135deg, #343a40 0%, #212529 100%);
+    }
+
+    .services,
+    .service-card,
+    .about,
+    .portfolio,
+    .contact {
+        background-color: var(--light-color);
+    }
+
+    .form-group input,
+    .form-group textarea {
+        background-color: #343a40;
+        border-color: #495057;
+        color: var(--text-color);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
