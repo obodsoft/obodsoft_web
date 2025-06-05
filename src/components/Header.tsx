@@ -29,7 +29,9 @@ export default function Header() {
       <div className="container">
         <nav>
           <div className="logo">
-            <h1>Obod<span>Soft</span></h1>
+            <Link href="/" onClick={() => setIsMenuOpen(false)}>
+              <h1>Obod<span>Soft</span></h1>
+            </Link>
           </div>
           <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
             <li>
