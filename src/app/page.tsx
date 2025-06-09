@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import LogoWall from "@/components/LogoWall";
 import About from "@/components/About";
 import Cta from "@/components/Cta";
 import Contact from "@/components/Contact";
@@ -27,6 +28,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Services />
+      <LogoWall />
       <About />
       <Cta />
       <Contact />

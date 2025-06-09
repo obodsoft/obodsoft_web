@@ -572,6 +572,46 @@ footer {
     transform: translateY(0);
 }
 
+/* Logo Wall Section */
+.logo-wall {
+    padding: 80px 0;
+    background-color: white;
+    overflow: hidden;
+    text-align: center;
+}
+
+.logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.logo-item {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-item img {
+    width: 80px;
+    height: 80px;
+    animation: move-diagonal 6s linear infinite alternate;
+}
+
+.logo-item:nth-child(2) img { animation-delay: 0.5s; }
+.logo-item:nth-child(3) img { animation-delay: 1s; }
+.logo-item:nth-child(4) img { animation-delay: 1.5s; }
+.logo-item:nth-child(5) img { animation-delay: 2s; }
+.logo-item:nth-child(6) img { animation-delay: 2.5s; }
+@keyframes move-diagonal {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(30px, -30px); }
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
     .hero-content h1 {
