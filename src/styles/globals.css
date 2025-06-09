@@ -512,6 +512,56 @@ nav {
     min-height: 150px;
 }
 
+/* CV Page */
+.cv {
+    background-color: white;
+}
+
+.cv-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cv-content {
+    display: flex;
+    gap: 50px;
+}
+
+.cv-left,
+.cv-right {
+    flex: 1;
+}
+
+.cv-left h3,
+.cv-right h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.skills li {
+    margin-bottom: 8px;
+}
+
+.cv-item {
+    margin-bottom: 25px;
+}
+
+.cv-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.cv-item span {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .cv-content {
+        flex-direction: column;
+    }
+}
+
 /* Footer */
 footer {
     background-color: var(--dark-color);
