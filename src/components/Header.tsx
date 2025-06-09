@@ -54,6 +54,11 @@ export default function Header() {
                 Contact
               </Link>
             </li>
+            <li>
+              <Link href="/cv" onClick={() => setIsMenuOpen(false)}>
+                CV
+              </Link>
+            </li>
           </ul>
           <div className={`hamburger ${isMenuOpen ? "active" : ""}`} onClick={toggleMenu}>
             <span></span>
