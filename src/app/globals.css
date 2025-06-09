@@ -9,6 +9,68 @@
     --transition: all 0.3s ease;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #f1f3f5;
+        --light-color: #212529;
+        --dark-color: #f1f3f5;
+    }
+
+    html {
+        color-scheme: dark;
+    }
+
+    body {
+        color: var(--text-color);
+        background-color: var(--light-color);
+    }
+
+    header {
+        background-color: rgba(33,37,41,0.95);
+    }
+
+    header.scrolled {
+        background-color: var(--light-color);
+    }
+
+    .hero,
+    .page-hero {
+        background: linear-gradient(135deg,#343a40 0%,#212529 100%);
+    }
+
+    .services,
+    .service-card,
+    .about,
+    .portfolio,
+    .contact {
+        background-color: var(--light-color);
+    }
+
+    .section-header p,
+    .hero-content p,
+    .page-hero p,
+    .service-card p,
+    .about-text p,
+    .stat p,
+    .contact-item p,
+    .footer-logo p,
+    .footer-links a,
+    .copyright {
+        color: #ccc;
+    }
+
+    .nav-links {
+        background-color: var(--light-color);
+    }
+
+    .form-group input,
+    .form-group textarea {
+        background-color: #343a40;
+        border-color: #495057;
+        color: var(--text-color);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
