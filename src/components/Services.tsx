@@ -1,49 +1,65 @@
 "use client";
 
 import { useEffect } from "react";
-import { animateOnScroll } from "@/utils/animations";
+import { servicesContent, ServiceItem } from "@/content/siteContent";
 
 export default function Services() {
   useEffect(() => {
-    animateOnScroll();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
   }, []);
 
   return (
     <section id="services" className="services">
       <div className="container">
-        <div className="section-header">
-          <h2 className="animate-on-scroll">Our Services</h2>
-          <p className="animate-on-scroll">Delivering digital products your users will love</p>
+        <div className="section-header animate-on-scroll">
+          <h2>Our Services</h2>
+          <p>
+            Comprehensive technology solutions designed to drive your business forward
+            with enterprise-grade expertise and partnership-focused delivery.
+          </p>
         </div>
         <div className="services-grid">
-          <div className="service-card animate-on-scroll">
-            <div className="service-icon">
-              <i className="fas fa-laptop-code"></i>
+          {servicesContent.map((service: ServiceItem, index: number) => (
+            <div key={service.id} className="service-card animate-on-scroll">
+              <div className="service-icon">
+                <i className={service.icon}></i>
+              </div>
+              <h3>{service.title}</h3>
+              <p className="service-description">{service.description}</p>
+              
+              <div className="service-technologies">
+                <h4>Technologies</h4>
+                <div className="tech-tags">
+                  {service.technologies.map((tech: string, techIndex: number) => (
+                    <span key={techIndex} className="tech-tag">{tech}</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="partnership-benefits">
+                <h4>Partnership Benefits</h4>
+                <ul>
+                  {service.partnershipBenefits.map((benefit: string, benefitIndex: number) => (
+                    <li key={benefitIndex}>{benefit}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <h3>Web Development</h3>
-            <p>Robust websites and web apps crafted with modern frameworks.</p>
-          </div>
-          <div className="service-card animate-on-scroll">
-            <div className="service-icon">
-              <i className="fas fa-mobile-alt"></i>
-            </div>
-            <h3>Mobile Apps</h3>
-            <p>Beautifully designed iOS and Android apps that engage on the go.</p>
-          </div>
-          <div className="service-card animate-on-scroll">
-            <div className="service-icon">
-              <i className="fas fa-server"></i>
-            </div>
-            <h3>Cloud Solutions</h3>
-            <p>Architecture and hosting built for scale and reliability.</p>
-          </div>
-          <div className="service-card animate-on-scroll">
-            <div className="service-icon">
-              <i className="fas fa-cogs"></i>
-            </div>
-            <h3>DevOps</h3>
-            <p>CI/CD pipelines and automation to keep your releases running smoothly.</p>
-          </div>
+          ))}
         </div>
       </div>
     </section>

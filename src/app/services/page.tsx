@@ -3,10 +3,12 @@ import PageHero from "@/components/PageHero";
 import Services from "@/components/Services";
 import Cta from "@/components/Cta";
 import Footer from "@/components/Footer";
+import { metadata as siteMetadata } from "@/content/siteContent";
 
 export const metadata = {
-  title: "Services | Obod Soft",
-  description: "Discover the solutions we offer to elevate your business.",
+  title: siteMetadata.services.title,
+  description: siteMetadata.services.description,
+  keywords: siteMetadata.services.keywords,
 };
 
 export default function ServicesPage() {
@@ -15,7 +17,7 @@ export default function ServicesPage() {
       <Header />
       <PageHero
         title="Our Services"
-        subtitle="Digital solutions tailored for ambitious brands"
+        subtitle="Technology solutions designed for partnership and success"
       />
       <Services />
       <Cta />

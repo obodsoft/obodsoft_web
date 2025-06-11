@@ -2,10 +2,12 @@ import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { metadata as siteMetadata, contactContent } from "@/content/siteContent";
 
 export const metadata = {
-  title: "Contact | Obod Soft",
-  description: "Start a conversation with our team today.",
+  title: siteMetadata.contact.title,
+  description: siteMetadata.contact.description,
+  keywords: siteMetadata.contact.keywords,
 };
 
 export default function ContactPage() {
@@ -13,8 +15,8 @@ export default function ContactPage() {
     <main>
       <Header />
       <PageHero
-        title="Contact Us"
-        subtitle="We'd love to hear about your project"
+        title={contactContent.hero.title}
+        subtitle={contactContent.hero.subtitle}
       />
       <Contact />
       <Footer />

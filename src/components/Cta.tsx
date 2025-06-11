@@ -1,25 +1,23 @@
 "use client";
 
-import { useInView } from "@/utils/animations";
+import { useEffect } from "react";
+import { animateOnScroll } from "@/utils/animations";
+import { ctaContent } from "@/content/siteContent";
 
 export default function Cta() {
-  const headerRef = useInView();
-  const textRef = useInView();
-  const buttonRef = useInView();
+  useEffect(() => {
+    animateOnScroll();
+  }, []);
 
   return (
     <section className="cta">
       <div className="container">
         <div className="cta-content">
-          <h2 ref={headerRef.ref} className="animate-on-scroll">
-            Ready to launch your next project?
-          </h2>
-          <p ref={textRef.ref} className="animate-on-scroll">
-            Let&apos;s collaborate to build software that moves your business forward.
-          </p>
-          <div ref={buttonRef.ref} className="cta-buttons animate-on-scroll">
-            <a href="#contact" className="btn btn-primary">
-              Get a Free Consultation
+          <h2 className="animate-on-scroll">{ctaContent.title}</h2>
+          <p className="animate-on-scroll">{ctaContent.description}</p>
+          <div className="cta-buttons animate-on-scroll">
+            <a href={ctaContent.button.href} className="btn btn-primary">
+              {ctaContent.button.text}
             </a>
           </div>
         </div>

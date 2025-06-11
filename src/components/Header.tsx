@@ -1,67 +1,70 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { companyInfo } from '@/content/siteContent';
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
   };
 
   return (
-    <header className={scrolled ? "scrolled" : ""}>
-      <div className="container">
-        <nav>
-          <div className="logo">
-            <Link href="/" onClick={() => setIsMenuOpen(false)}>
-              <h1>Obod<span>Soft</span></h1>
+    <header className={isScrolled ? 'scrolled' : ''}>
+      <nav className="container">
+        <div className="logo">
+          <Link href="/">
+            <h1>
+              {companyInfo.name.split(' ')[0]}
+              <span>{companyInfo.name.split(' ')[1]}</span>
+            </h1>
+          </Link>
+        </div>
+
+        <ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
+          <li>
+            <Link href="/" onClick={closeMobileMenu}>
+              Home
             </Link>
-          </div>
-          <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
-            <li>
-              <Link href="/" onClick={() => setIsMenuOpen(false)}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/services" onClick={() => setIsMenuOpen(false)}>
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" onClick={() => setIsMenuOpen(false)}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-                Contact
-              </Link>
-            </li>
-          </ul>
-          <div className={`hamburger ${isMenuOpen ? "active" : ""}`} onClick={toggleMenu}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </nav>
-      </div>
+          </li>
+          <li>
+            <Link href="/about" onClick={closeMobileMenu}>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link href="/services" onClick={closeMobileMenu}>
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact" onClick={closeMobileMenu}>
+              Contact
+            </Link>
+          </li>
+        </ul>
+
+        <div
+          className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
     </header>
   );
 }

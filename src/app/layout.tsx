@@ -1,10 +1,32 @@
-import "@/styles/globals.css";
+import "./globals.css";
 import type { Metadata } from "next";
+import { metadata as siteMetadata, companyInfo } from '@/content/siteContent'
 
 export const metadata: Metadata = {
-  title: "Obod Soft | Web & Mobile App Experts",
-  description:
-    "We craft modern web and mobile applications that help your business grow.",
+  title: siteMetadata.home.title,
+  description: siteMetadata.home.description,
+  keywords: siteMetadata.home.keywords,
+  authors: [{ name: companyInfo.name }],
+  creator: companyInfo.name,
+  publisher: companyInfo.name,
+  metadataBase: new URL('https://obodsoft.com'), // Update with actual domain
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://obodsoft.com',
+    siteName: 'Obod Soft LTD',
+    title: siteMetadata.home.title,
+    description: siteMetadata.home.description,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteMetadata.home.title,
+    description: siteMetadata.home.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

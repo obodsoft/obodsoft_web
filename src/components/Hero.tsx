@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { animateOnScroll } from "@/utils/animations";
+import { heroContent } from "@/content/siteContent";
 
 export default function Hero() {
   useEffect(() => {
@@ -14,15 +15,20 @@ export default function Hero() {
     <section id="home" className="hero">
       <div className="container">
         <div className="hero-content">
-          <h1 className="animate-on-scroll">World-Class Web & Mobile Apps</h1>
-          <p className="animate-on-scroll">From concept to launch, we craft high-performance experiences that ignite growth.</p>
+          <h1 className="animate-on-scroll">{heroContent.title}</h1>
+          <p className="hero-subtitle animate-on-scroll">{heroContent.subtitle}</p>
+          <p className="hero-description animate-on-scroll">{heroContent.description}</p>
           <div className="hero-buttons animate-on-scroll">
-            <a href="#services" className="btn btn-primary">Our Services</a>
-            <a href="#contact" className="btn btn-secondary">Start a Project</a>
+            <a href={heroContent.primaryButton.href} className="btn btn-primary">
+              {heroContent.primaryButton.text}
+            </a>
+            <a href={heroContent.secondaryButton.href} className="btn btn-secondary">
+              {heroContent.secondaryButton.text}
+            </a>
           </div>
         </div>
         <div className="hero-image animate-on-scroll">
-          <img src="/images/hero-image.svg" alt="Software Development Illustration" />
+          <img src="/images/hero-image.svg" alt="Technology Partnership Illustration" />
         </div>
       </div>
     </section>

@@ -1,3 +1,7 @@
+"use client";
+
+import { companyInfo, navigation } from "@/content/siteContent";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   
@@ -6,20 +10,29 @@ export default function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-logo">
-            <h2>Obod<span>Soft</span></h2>
-            <p>Innovative Software Solutions</p>
+            <h2>
+              {companyInfo.name.split("").map((char, index) => 
+                char === companyInfo.name[4] ? (
+                  <span key={index}>{char}</span>
+                ) : (
+                  char
+                )
+              )}
+            </h2>
+            <p>{companyInfo.tagline}</p>
           </div>
           <div className="footer-links">
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              {navigation.footer.company.map((item, index) => (
+                <li key={index}>
+                  <a href={item.href}>{item.name}</a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
         <div className="copyright">
-          <p>&copy; {currentYear} Obod Soft. All rights reserved.</p>
+          <p>&copy; {currentYear} {companyInfo.name}. All rights reserved.</p>
         </div>
       </div>
     </footer>
