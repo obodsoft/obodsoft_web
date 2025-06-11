@@ -290,7 +290,7 @@ nav {
         linear-gradient(135deg, transparent 0%, transparent 48%, rgba(118, 75, 162, 0.25) 49%, rgba(118, 75, 162, 0.08) 50%, rgba(118, 75, 162, 0.25) 51%, transparent 52%, transparent 100%),
         linear-gradient(-45deg, transparent 0%, transparent 48%, rgba(76, 201, 240, 0.2) 49%, rgba(76, 201, 240, 0.06) 50%, rgba(76, 201, 240, 0.2) 51%, transparent 52%, transparent 100%);
     background-size: 400px 400px, 350px 350px, 450px 450px;
-    animation: neuralNetwork 30s linear;
+    animation: neuralNetwork 30s linear infinite;
     z-index: 2;
 }
 
@@ -633,7 +633,7 @@ nav {
 
 
 .hero-content-glass h1 {
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 25px;
     line-height: 1.1;
