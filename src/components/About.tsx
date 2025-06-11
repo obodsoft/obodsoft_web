@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { aboutContent } from "@/content/siteContent";
+import TechElements from "./TechElements";
 
 export default function About() {
   useEffect(() => {
@@ -27,7 +28,7 @@ export default function About() {
       <div className="container">
         {/* Journey Section */}
         <div className="about-section">
-          <div className="about-content">
+        <div className="about-content">
             <div className="about-text animate-on-scroll">
               <h2>{aboutContent.journey.title}</h2>
               <p>{aboutContent.journey.description}</p>

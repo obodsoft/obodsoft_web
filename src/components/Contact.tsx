@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { contactContent, companyInfo } from "@/content/siteContent";
+import TechElements from "./TechElements";
 
 interface FormData {
   name: string;
@@ -91,13 +92,13 @@ export default function Contact() {
       const error = validateField(key, formData[key as keyof FormData]);
       if (error) newErrors[key] = error;
     });
-
+    
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       setIsSubmitting(false);
       return;
     }
-
+    
     try {
       // Simulate form submission (replace with actual API call)
       await new Promise(resolve => setTimeout(resolve, 2000));
@@ -242,8 +243,8 @@ export default function Contact() {
                     <option value="other">Other</option>
                   </select>
                   {errors.projectType && <span className="error-text">{errors.projectType}</span>}
-                </div>
-                <div className="form-group">
+              </div>
+              <div className="form-group">
                   <select
                     name="timeline"
                     value={formData.timeline}

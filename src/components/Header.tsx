@@ -21,50 +21,58 @@ export default function Header() {
     setIsMobileMenuOpen(false);
   };
 
+  const renderCompanyName = () => {    
+      return (
+        <>
+          Obod<span style={{ color: 'var(--primary-color)' }}>S</span>oft
+        </>
+      );
+
+  };
+
   return (
     <header className={isScrolled ? 'scrolled' : ''}>
       <nav className="container">
-        <div className="logo">
+          <div className="logo">
           <Link href="/">
             <h1>
-              {companyInfo.name.split(' ')[0]}
-              <span>{companyInfo.name.split(' ')[1]}</span>
+              {renderCompanyName()}
             </h1>
-          </Link>
-        </div>
+            </Link>
+          </div>
 
         <ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
-          <li>
+            <li>
             <Link href="/" onClick={closeMobileMenu}>
-              Home
-            </Link>
-          </li>
-          <li>
+                Home
+              </Link>
+            </li>
+            <li>
             <Link href="/about" onClick={closeMobileMenu}>
               About
-            </Link>
-          </li>
-          <li>
+              </Link>
+            </li>
+            <li>
             <Link href="/services" onClick={closeMobileMenu}>
               Services
-            </Link>
-          </li>
-          <li>
+              </Link>
+            </li>
+            <li>
             <Link href="/contact" onClick={closeMobileMenu}>
-              Contact
-            </Link>
-          </li>
-        </ul>
+                Contact
+              </Link>
+            </li>
+          </ul>
 
         <div
           className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
     </header>
   );
 }

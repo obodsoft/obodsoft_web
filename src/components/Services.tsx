@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { servicesContent, ServiceItem } from "@/content/siteContent";
+import TechElements from "./TechElements";
 
 export default function Services() {
   useEffect(() => {
@@ -35,9 +36,9 @@ export default function Services() {
         <div className="services-grid">
           {servicesContent.map((service: ServiceItem, index: number) => (
             <div key={service.id} className="service-card animate-on-scroll">
-              <div className="service-icon">
+            <div className="service-icon">
                 <i className={service.icon}></i>
-              </div>
+            </div>
               <h3>{service.title}</h3>
               <p className="service-description">{service.description}</p>
               
@@ -47,8 +48,8 @@ export default function Services() {
                   {service.technologies.map((tech: string, techIndex: number) => (
                     <span key={techIndex} className="tech-tag">{tech}</span>
                   ))}
-                </div>
-              </div>
+          </div>
+            </div>
 
               <div className="partnership-benefits">
                 <h4>Partnership Benefits</h4>
@@ -57,7 +58,7 @@ export default function Services() {
                     <li key={benefitIndex}>{benefit}</li>
                   ))}
                 </ul>
-              </div>
+          </div>
             </div>
           ))}
         </div>
